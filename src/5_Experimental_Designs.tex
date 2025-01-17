@@ -1,0 +1,96 @@
+\section{Experimental Designs}
+
+\subsection{Overview of Experimental Designs}
+\subsubsection{Key Concepts}
+\begin{itemize}
+    \item \textbf{Definition of Experiments:} Controlled procedures to discover effects, validate hypotheses, or illustrate principles.
+    \item \textbf{Goals:} Ensure validity (accuracy of measurements) and reliability (consistency of outcomes).
+\end{itemize}
+
+\subsection{Data Splitting and Validation}
+\subsubsection{Testing Models on Unseen Data}
+\begin{itemize}
+    \item Random sampling for training and testing.
+    \item Bootstrapping: Repeated random sampling to estimate performance metrics.
+\end{itemize}
+
+\subsubsection{Cross-Validation (CV)}
+\begin{itemize}
+    \item \textbf{k-Fold CV:} Data split into \( k \) subsets; each subset used once for testing.
+    \item \textbf{Stratified k-Fold CV:} Ensures target class distributions are consistent across folds.
+    \item Common mistakes: Data leakage during preprocessing and inconsistent splits.
+\end{itemize}
+
+\subsubsection{Train-, Validation-, and Test Sets}
+\begin{itemize}
+    \item Separating datasets for parameter optimization (validation) and performance estimation (testing).
+    \item Modern datasets allow for larger training sets, but validation and test sets must maintain relevance.
+\end{itemize}
+
+\subsubsection{Time-Based Splits}
+\begin{itemize}
+    \item For scenarios like recommender systems, data is split chronologically to simulate real-world conditions.
+    \item Forward-chaining CV is recommended for time-sensitive experiments.
+\end{itemize}
+
+\subsection{Performance Indicators}
+\subsubsection{Classification Metrics}
+\begin{itemize}
+    \item \textbf{Accuracy:} Fraction of correct predictions.
+    \item \textbf{Precision:} Proportion of true positives among predicted positives.
+    \item \textbf{Recall (Sensitivity):} Proportion of true positives among actual positives.
+    \item \textbf{F1-Score:} Harmonic mean of precision and recall.
+\end{itemize}
+
+\subsubsection{Regression Metrics}
+\begin{itemize}
+    \item \textbf{Mean Absolute Error (MAE):} Average absolute differences between predictions and ground truth.
+    \item \textbf{Root Mean Squared Error (RMSE):} Penalizes larger errors by squaring differences.
+\end{itemize}
+
+\subsubsection{Optimization Objectives}
+\begin{itemize}
+    \item Combine performance metrics with practical constraints, such as runtime.
+    \item Example: Balance accuracy and runtime in model selection.
+\end{itemize}
+
+\subsection{Statistical Hypothesis Testing}
+\subsubsection{Hypotheses and Errors}
+\begin{itemize}
+    \item \textbf{Null Hypothesis (\( H_0 \)):} Default assumption, no significant effect.
+    \item \textbf{Alternative Hypothesis (\( H_1 \)):} Contradicts \( H_0 \).
+    \item \textbf{Type I Error (\( \alpha \)):} False positive; rejecting \( H_0 \) when true.
+    \item \textbf{Type II Error (\( \beta \)):} False negative; failing to reject \( H_0 \) when false.
+\end{itemize}
+
+\subsubsection{Statistical Tests}
+\begin{itemize}
+    \item \textbf{Z-Test:} Tests mean differences; assumes normal distribution.
+    \item \textbf{t-Test:} For small samples; accounts for increased uncertainty.
+    \item \textbf{Paired t-Test:} Compares correlated samples, reducing variance.
+    \item \textbf{ANOVA:} Tests for differences among multiple groups.
+\end{itemize}
+
+\subsection{Non-Parametric Testing}
+\begin{itemize}
+    \item \textbf{Sign Test:} Compares medians of matched pairs.
+    \item \textbf{Wilcoxon Signed-Rank Test:} Alternative to paired t-test; ranks data.
+    \item \textbf{Mann-Whitney U Test:} Tests distribution equality of two independent samples.
+    \item \textbf{Kruskal-Wallis Test:} Extends U test for multiple groups.
+    \item \textbf{Friedman Test:} Tests differences across multiple dependent samples.
+\end{itemize}
+
+\subsection{Case Studies}
+\subsubsection{Music Genre Classification}
+\begin{itemize}
+    \item Gaussian Mixture Models (GMMs) for classification.
+    \item Comparison: 10-mixture vs. 30-mixture GMMs using 10-fold CV.
+    \item Statistical analysis confirmed improved performance of 30-mixture GMMs.
+\end{itemize}
+
+\subsection{Key Insights and Practices}
+\begin{itemize}
+    \item Pilot experiments are crucial to test experimental setups.
+    \item Statistical significance does not guarantee practical importance.
+    \item Proper validation ensures robustness and generalizability of results.
+\end{itemize}

@@ -1,0 +1,130 @@
+\section{Data Science Experiments}
+
+\subsection{Overview of Data Science Experiments}
+\subsubsection{Key Concepts}
+\begin{itemize}
+    \item \textbf{Data Science Definition:} Focuses on gaining insights from data using computation, statistics, and visualization.
+    \item \textbf{Scientific Method:} Problem recognition, data collection, hypothesis formulation, and testing.
+\end{itemize}
+
+\subsection{Types of Experiments}
+\begin{itemize}
+    \item \textbf{Natural Experiments:} Observational, without controlled manipulation. Common in fields like economics and meteorology.
+    \item \textbf{Field Experiments:} Conducted in natural settings with some controlled stimuli. Higher validity but harder to control.
+    \item \textbf{Controlled Experiments:} Manipulate independent variables while controlling others. Common in machine learning and data-driven studies.
+\end{itemize}
+
+\subsection{Experiments in Data Science}
+\begin{itemize}
+    \item Controlled experiments are often employed, but observational or pre-existing data may also be utilized.
+    \item Example: Machine learning experiments often require reproducible and controlled conditions.
+\end{itemize}
+
+\subsubsection{Behaviorism in Data Science}
+\begin{itemize}
+    \item Analyzing user behavior through platforms (e.g., movie recommendations).
+    \item Methods like A/B testing ensure controlled variations.
+\end{itemize}
+
+\subsection{Variables in Experiments}
+\begin{itemize}
+    \item \textbf{Independent Variables:} Factors manipulated to observe their effect.
+    \item \textbf{Dependent Variables:} Measured outcomes influenced by independent variables.
+    \item \textbf{Extraneous Variables:} Uncontrolled factors that may affect outcomes.
+    \item \textbf{Latent Variables:} Hidden variables like trust or satisfaction.
+\end{itemize}
+
+\subsubsection{Hypotheses}
+\begin{itemize}
+    \item Test causal relationships between variables.
+    \item Conditions:
+    \begin{itemize}
+        \item Cause precedes effect.
+        \item Influencing factors are accounted for.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Control Mechanisms}
+\begin{itemize}
+    \item Independent variables are deliberately changed across different settings (e.g., treatment vs. placebo).
+    \item Extraneous variables are neutralized or accounted for using factorial designs.
+\end{itemize}
+
+\subsection{Controlled Machine Learning Experiments}
+\begin{itemize}
+    \item Experiments rely on:
+    \begin{itemize}
+        \item Data points described by features.
+        \item Algorithms trained to predict outcomes (classification, regression).
+    \end{itemize}
+    \item Hypotheses:
+    \begin{itemize}
+        \item Feature set A predicts better than feature set B.
+        \item Algorithm X outperforms algorithm Y.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Example}
+\begin{itemize}
+    \item Comparing neural networks for image classification:
+    \begin{itemize}
+        \item \textbf{Independent Variable:} Network size.
+        \item \textbf{Dependent Variable:} Prediction accuracy.
+    \end{itemize}
+    \item Challenges: disentangling effects of other factors like frameworks or parameters.
+\end{itemize}
+
+\subsection{Experiment Techniques}
+\subsubsection{Factorial Designs}
+\begin{itemize}
+    \item Examines all combinations of multiple independent variables.
+    \item Useful for understanding interactions and confounding effects.
+\end{itemize}
+
+\subsubsection{Validation and Testing}
+\begin{itemize}
+    \item Splitting data into training and testing sets ensures models generalize well.
+    \item Avoid using testing data during training to prevent overfitting.
+\end{itemize}
+
+\subsection{Examples in Practice}
+\begin{itemize}
+    \item \textbf{Recommender Systems:}
+    \begin{itemize}
+        \item Compare algorithms like matrix factorization vs. baselines.
+        \item Measure error metrics (e.g., RMSE) on test data.
+    \end{itemize}
+    \item \textbf{Decision Trees:}
+    \begin{itemize}
+        \item Use splitting criteria like information gain to classify data.
+        \item Risk of overfitting with complex datasets.
+    \end{itemize}
+    \item \textbf{Clustering (Unsupervised Learning):}
+    \begin{itemize}
+        \item Groups data points based on similarity without predefined labels.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Data Characteristics}
+\begin{itemize}
+    \item Data points may have varying attributes, scales, and quality issues.
+    \item Exploration includes checking correlations, patterns, and clustering.
+\end{itemize}
+
+\subsubsection{Scales of Measurement}
+\begin{itemize}
+    \item \textbf{Nominal:} Categorical, no hierarchy.
+    \item \textbf{Ordinal:} Ranked order, no measurable intervals.
+    \item \textbf{Interval:} Equal differences without a true zero.
+    \item \textbf{Ratio:} True zero with meaningful comparisons.
+\end{itemize}
+
+\subsection{Model Validation}
+\begin{itemize}
+    \item Ensures models perform well on unseen data.
+    \item Methods:
+    \begin{itemize}
+        \item Cross-validation.
+        \item Comparing predictions against held-out test data.
+    \end{itemize}
+\end{itemize}
